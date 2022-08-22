@@ -14,5 +14,15 @@
 All code written in the process of creating the final ML model is located in ML_FR_Model.ipynb. 
 ```
 
-## Description
+# Description
 **Nora.ai** is a machine learning web app that implements a facial recognition model using Support Vector Machines (SVM) to perform automated gender classification. The model makes use of the **Haar Cascade Classifier** available in the OpenCV Framework to detect facial features. Thereafter, the model performs feature extraction by finding eigenfaces using the **Principal Component Analysis** method. Finally, the eigenimage is passed to the SVM model to make predictions. 
+
+
+
+![Developing Face Recognition Model (1)](https://user-images.githubusercontent.com/53469845/185990191-786753bb-f077-4827-8bca-2d680feafa49.png)
+
+
+# Demo
+
+https://user-images.githubusercontent.com/53469845/185994048-709c59c1-6d40-4f75-aa86-5cc0b9913310.mov
+
