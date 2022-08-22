@@ -3,27 +3,62 @@
 {% block bodyblock %}
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat:wght@500;900&family=Orelega+One&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="app.css"> -->
+    <style>
+        .line-1{
+            position: relative;
+            width: 58em;
+            margin: 0 auto;
+            border-right: 2px solid rgba(255,255,255,.75);
+            font-size: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            transform: translateY(-50%);    
+        }
+        /* Animation */
+        .anim-typewriter{
+            animation: typewriter 6s steps(100) 1s 1 normal both,
+                blinkTextCursor 500ms steps(44) infinite normal;
+        }
+        .inline {
+            display: inline-block;
+        }
+
+        @keyframes typewriter{
+            from{width: 0;}
+            to{width: end;}
+        }
+        @keyframes blinkTextCursor{
+            from{border-right-color: rgba(255,255,255,.75);}
+            to{border-right-color: transparent;}
+        }
+        p {
+            color: white; 
+            line-height:40px; 
+            font-family: Montserrat; 
+            letter-spacing: 1px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <br><br>
-        <h3 class="display-6" style="color:#6DA1B2; font-family: Montserrat; font-weight:bold; font-size: 70px; padding-top: 40px; padding-bottom: 30px;">
+        <h3 class="display-6" style="color:#6DA1B2; font-family: Montserrat; font-weight:bold; font-size: 70px; padding-top: 150px; padding-bottom: 30px;">
             welcome to nora.ai
             <img class="image-fluid" src="/static/hello.png" alt="" width="120">
 
         </h3>
         <br>
-        <p style="color: white; font-family: Montserrat; letter-spacing: 1px;">
+        <p class="line-1 anim-typewriter inline" style="color: white; font-family: Montserrat; letter-spacing: 1px;">
             Nora.ai is an end-to-end facial recognition software that performs gender classification on human faces. 
         </p>
-        <p style="color: white; line-height:40px; font-family: Montserrat; letter-spacing: 1px;">
+        <!-- <p>
             Facial features are extracted using OpenCV's Haar Cascade Classifier and thereafter, recognized <br>by computing eigenfaces using PCA (Principal Component Analysis). 
-        </p>
+        </p> -->
     
     </div>    
 </body>
 
 {% endblock %}
 
-rgb(44, 81, 97)
 #6DA1B2

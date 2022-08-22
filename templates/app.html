@@ -3,20 +3,88 @@
 {% block bodyblock %}
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat:wght@500;900&family=Orelega+One&display=swap" rel="stylesheet">
+    <style>
+        .typewriter p {
+            color: #fff;
+            font-family: monospace;
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            border-right: .15em solid orange; /* The typwriter cursor
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .15em; /* Adjust as needed */
+            animation: 
+            typing 3.5s steps(30, end),
+            blink-caret .5s step-end infinite;
+        }
+        
+        /* The typing effect */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange }
+        } */
+
+        p {
+            color: white; 
+            line-height:40px; 
+            font-family: Montserrat; 
+            letter-spacing: 1px;
+        }
+        th {
+            font-family: Montserrat; 
+            font-weight: bold; 
+            color: #6DA1B2;
+            padding-bottom: 50px;
+        }
+        .alt {
+            color: white;
+        }
+    </style>
 </head>
 
 <div class="container">
     <br><br>
-    <h3 class="display-8" style="font-family: Montserrat; color: white; opacity: 0.80; padding-top: 40px">Face Recognition & Gender Classification Application</h3>
+    <h3 class="display-8" style="font-family: Montserrat; color: white; font-weight: bold; opacity: 0.80; padding-top: 40px;">Face Recognition & Gender Classification Application</h3>
 
-    <p style="font-family: Montserrat; color: #6DA1B2">
-        As soon as the user uploads the image, the algorithm convert the image into a grayscale, returns a bounding box that crops the face, convert into eigen image and 
-        finally it model to predict. All this functionality dumped in the flask app.
+    <p style="font-family: Montserrat; color: #6DA1B2;">
+        As soon as the user uploads the image, the algorithm convert the image into a grayscale, returns a bounding box that crops the face, convert the image into an eigen image and finally uses to model to make predictions.
     </p>
     <img src="/static/images/images/002.PNG" class="image-fluid" width="600" alt="">
 
-    <a class="btn btn-outline-primary" href="/app/gender/">Gender App</a>
+    <a class="btn btn-outline-primary" style="color: white; border-color: white; border-style: dotted;" href="/app/gender/">Gender App</a>
+    <p style="font-family: Montserrat; padding-top: 80px; padding-bottom: 40px; color: white; opacity: 0.60; font-size: 20px; font-weight: bold;">
+        How the Machine Learning Model Works
+    </p>
 
+    <table>
+        <tr>
+            <th class="col-4">Read the Image using OpenCV</th>
+            <th class="col">-></th>
+            <th class="col-3">Convert the Image to Grayscale</th>
+            <th class="col">-></th>
+            <th class="col-4">Crop the Face Using The Haar Classifier</th>
+            <!-- <br><p class='alt'>A bounding box is created</p> -->
+        </tr>
+        <tr>
+            <th>Normalize the Data to Obtain ROI</th>
+            <th class="col">-></th>
+            <th>Structure the Images by Resizing</th>
+            <th class="col">-></th>
+            <th>Flatten the Images to Finish Structuring</th>
+        </tr>
+        <tr>
+            <th>Begin Feature Extraction Using PCA: Find Eigen Face</th>
+            <th class="col">-></th>
+            <th>Find Eigen Image</th>
+            <th class="col">-></th>
+            <th>Pass Eigen Image to SVM ML Model to Obtain Predictions</th>
+        </tr>
+    </table>
 </div>
 
 {% endblock %}
