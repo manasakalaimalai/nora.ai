@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block bodyblock %}
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat:wght@500;900&family=Orelega+One&display=swap" rel="stylesheet">
+</head>
+
+<div class="container">
+    <br><br>
+    <h3 class="display-8" style="font-family: Montserrat; color: white; opacity: 0.80; padding-top: 40px">Face Recognition & Gender Classification Application</h3>
+
+    <p style="font-family: Montserrat; color: #6DA1B2">
+        As soon as the user uploads the image, the algorithm convert the image into a grayscale, returns a bounding box that crops the face, convert into eigen image and 
+        finally it model to predict. All this functionality dumped in the flask app.
+    </p>
+    <img src="/static/images/images/002.PNG" class="image-fluid" width="600" alt="">
+
+    <a class="btn btn-outline-primary" href="/app/gender/">Gender App</a>
+
+</div>
+
+{% endblock %}
