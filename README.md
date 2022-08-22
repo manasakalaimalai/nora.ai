@@ -9,7 +9,10 @@
 
 ![demo](https://user-images.githubusercontent.com/53469845/185976807-a339c9da-a4eb-4502-8e5a-80239c6d38fe.gif)
 
-`Deployed Web App:` https://norai-flask.herokuapp.com/
+### `Deployed Web App:` https://norai-flask.herokuapp.com/
+```
+All code written in the process of creating the final ML model is located in ML_FR_Model.ipynb. 
+```
 
 ## Description
 **Nora.ai** is a machine learning web app that implements a facial recognition model using Support Vector Machines (SVM) to perform automated gender classification. The model makes use of the **Haar Cascade Classifier** available in the OpenCV Framework to detect facial features. Thereafter, the model performs feature extraction by finding eigenfaces using the **Principal Component Analysis** method. Finally, the eigenimage is passed to the SVM model to make predictions. 
